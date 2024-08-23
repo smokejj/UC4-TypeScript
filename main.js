@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var JogosEletronicos_1 = require("./JogosEletronicos");
+var bibliotecaDejogos_1 = require("./bibliotecaDejogos");
+var JogoTabuleiro_1 = require("./JogoTabuleiro");
+var rl = require('readline-sync');
+var freeFire = new JogosEletronicos_1.JogoEletronico('Free Fire', 'Tiro', 12);
+freeFire.plataforma = 'mobile';
+var xadrez = new JogoTabuleiro_1.JogoTabuleiro('Xadrez', 'Pensamento', 10);
+xadrez.numeroDeJogadores = 2;
+var myBiblioteca = new bibliotecaDejogos_1.BibliotecaDeJogos();
+myBiblioteca.adicionaJogo(xadrez);
+myBiblioteca.adicionaJogo(freeFire);
+myBiblioteca.listaJogos();
